@@ -16,7 +16,7 @@ step3.讀取檔案'withfactor.csv'並使用LSTM和CNN訓練並回測績效
 
 首先說明一下我的因子是["open-avg_vwap","cs_rank_open-avg_vwap*close-vwap","corr_hv_5","rank_std_high_5"]
 
-VWAP：跟一般均價不同，會讓成交量大的那個價格權重更多
+VWAP：跟一般均價不同，會讓成交量大的那個價格權重更多，因為沒有逐筆資料，我用的是成交金額除以成交股數作為平均成交價
 
  $\mathrm{VWAP}=\frac{\sum{t=1}^{T} P_t\,Q_t}{\sum_{t=1}^{T} Q_t}$
 
