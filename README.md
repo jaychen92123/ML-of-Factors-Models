@@ -8,6 +8,10 @@ step3.讀取檔案'withfactor.csv'並使用LSTM和CNN訓練並回測績效
 
 # 總結：
 
+透過CNN模型的結果普遍優於時序控制更強烈的LSTM
+
+整體噪音還是過於強烈 可以加入更多中立與降頻處理
+
 ## 因子訊號
 
 首先說明一下我的因子是["open-avg_vwap","cs_rank_open-avg_vwap*close-vwap","corr_hv_5","rank_std_high_5"]
@@ -28,7 +32,7 @@ rank_std_high_5：是個股序列排序，看今天的五日最高價標準差�
 
 ## 交易規則
 
-當日收盤後計算訊號 → 標準化/去極值 → 合成分數 score（模型輸出）
+當日收盤後計算訊號 → 標準化/rank去規模 → 合成分數 score（模型輸出）
 
 依 score 排名：做多 Top-N、做空 Bottom-N（等權配重）。
 
