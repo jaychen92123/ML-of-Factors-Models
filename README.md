@@ -6,7 +6,7 @@ step2.讀取"WebData.csv"後計算因子並匯出檔案'withfactor.csv'
 
 step3.讀取檔案'withfactor.csv'並使用LSTM和CNN訓練並回測績效
 
-總結：
+## 總結：
 
 首先說明一下我的因子是["open-avg_vwap","cs_rank_open-avg_vwap*close-vwap","corr_hv_5","rank_std_high_5"]
 
